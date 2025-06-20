@@ -1,0 +1,5 @@
+com/blackbox/repository/FileRepository.class
+com/blackbox/BlockboxApplication.class
+com/blackbox/controller/FileController.class
+com/blackbox/service/FileService.class
+com/blackbox/model/FileEntity.class
