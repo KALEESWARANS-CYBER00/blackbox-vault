@@ -1,37 +1,133 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout Base */
 body {
-    font-family: sans-serif;
-    background: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #000000 0%, #0f0f0f 100%);
+    color: #00ffe7;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1100px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Card Component */
+.card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #00ffe7;
+    box-shadow: 0 0 10px #00ffe766;
     padding: 30px;
-    color: #333;
+    border-radius: 12px;
+    flex: 1 1 450px;
+    backdrop-filter: blur(5px);
+    min-height: 300px;
 }
-h1 {
-    color: #0077cc;
+
+/* Highlight Text */
+.highlight {
+    color: #00ffff;
+    text-shadow: 0 0 5px #0ff;
 }
+
+/* Upload Form */
 form {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
 }
+
+.custom-file-input {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #111;
+    border: 1px dashed #00ffe7;
+    padding: 12px;
+    border-radius: 6px;
+    color: #00ffe7;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-file-input input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
 button {
-    background-color: #0077cc;
+    padding: 12px;
+    background: #00ffe7;
+    color: #000;
+    font-weight: bold;
     border: none;
-    padding: 8px 12px;
-    color: white;
-    border-radius: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
+button:hover {
+    transform: scale(1.05);
+    background: #00fff7;
+}
+
+/* Upload Message */
 #message {
-    margin: 10px 0;
-    color: green;
+    color: #80ffb0;
+    font-weight: bold;
 }
-ul {
+
+/* File List Styles */
+.file-list-section h2 {
+    margin-bottom: 20px;
+    color: #0ff;
+    border-bottom: 1px solid #00ffe7;
+    padding-bottom: 10px;
+}
+
+ul#fileList {
     list-style: none;
     padding: 0;
 }
-li {
-    margin: 5px 0;
+
+ul#fileList li {
+    background-color: #111;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #00ffe7;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-a {
-    color: #0077cc;
+
+ul#fileList li a {
+    color: #0ff;
     text-decoration: none;
 }
-a:hover {
+
+ul#fileList li a:hover {
     text-decoration: underline;
 }

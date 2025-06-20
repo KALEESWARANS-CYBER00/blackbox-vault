@@ -2,22 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blockbox Uploader</title>
+    <title>Blockbox Vault</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>📂 Secure Upload - Blockbox</h1>
-    
-    <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" id="fileInput" required />
-        <button type="submit">Upload</button>
-    </form>
-    
-    <div id="message"></div>
-    
-    <h2>Uploaded Files</h2>
-    <ul id="fileList"></ul>
-    
+    <div class="container">
+        <!-- Left Panel: Upload Card -->
+        <div class="card upload-section">
+            <h1>🚀 Upload to <span class="highlight">Blockbox</span></h1>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label class="custom-file-input">
+                    <input type="file" id="fileInput" required />
+                    <span>Select File</span>
+                </label>
+                <button type="submit">⬆️ Upload</button>
+                <div id="message"></div>
+            </form>
+        </div>
+
+        <!-- Right Panel: Uploaded Files -->
+        <div class="card file-list-section">
+            <h2>📁 Vault Files</h2>
+            <ul id="fileList"></ul>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
